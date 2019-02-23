@@ -23,7 +23,7 @@ namespace TDD01Tests
 			ICalculator c = new CalculatorImpl();
 			Assert.Equal(0, c.Current);
 			c.Add(4);
-			Assert.Equal(4, c.Current);
+			Assert.Equal(5, c.Current);
         }
 
         [Fact]
@@ -75,8 +75,8 @@ namespace TDD01Tests
 		}
 
         [Theory]
-        [InlineData(5, 1, 6)]
-        [InlineData(7, 1, 8)]
+        [InlineData(5, 4, 6)]
+        [InlineData(7, 2, 8)]
         [InlineData(5, -11, -6)]
         [InlineData(7, -13, -6)]
         public void AddTest(int x, int y, int res)
